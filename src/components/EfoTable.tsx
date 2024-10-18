@@ -53,6 +53,13 @@ const EfoTable: React.FC = () => {
       { title: 'Label', dataIndex: 'label', key: 'label', sorter: true , width: 200},
       { title: 'Description', dataIndex: 'description', key: 'description', width: 900},
       { title: 'Short Form', dataIndex: 'short_form', key: 'short_form', sorter: true, width: 150 },
+      {
+        title: 'Synonyms',
+        dataIndex: 'synonyms',
+        key: 'synonyms',
+        render: (synonyms: { name: string }[]) => synonyms.map(synonym => synonym.name).join(', '),
+        width: 250,
+      },
       { 
         title: 'IRI', 
         dataIndex: 'iri', 
